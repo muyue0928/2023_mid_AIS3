@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="1">
+        
+    </div>
+    
+    
+    <script>
+        
+        function getRandomInt(min, max) {
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+        }
+
+        let rand = getRandomInt(0,2)
+        let one = document.getElementById("1");
+
+        console.log(rand);
+
+        if(rand){
+            one.innerHTML='<img src="1.jpg" id="pic1" class="display:none">'
+        }
+        else{
+            one.innerHTML='<img src="2.jpg" id="pic2" class="display:none">'
+        }
+    </script>
+</body>
+</html>
